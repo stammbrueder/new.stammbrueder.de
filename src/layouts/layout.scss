@@ -45,10 +45,10 @@ main {
 
 header {
   top: 0;
+	z-index: 999;
   max-height: 10em;
   overflow: hidden;
   position: fixed;
-	z-index: 1;
   width: 100%;
   background: rgba(black, 0.8);
 
@@ -99,21 +99,6 @@ footer {
 	nav {
 		margin-left: auto;
 	}
-}
-
-section.hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background: var(--img) center center;
-	background-size: cover;
-	color: white;
-	min-height: 100svh;
-	font-size: 1.5em;
-	padding: 8rem 1rem 1rem;
-	box-sizing: border-box;
 }
 
 .tile-row {

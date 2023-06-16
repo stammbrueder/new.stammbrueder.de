@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Tile from "../components/Tile.astro";
+import Hero from '../components/Hero.astro'
 ---
 <Layout title="Camperausbau - Stammbrüder" hero="true">
-	<section class="hero" style="--img: url('/img/camper_wald.jpg');">
+	<Hero image="/img/camper_wald.jpg">
 		<h1>Wir planen und fertigen individuelle Camper</h1>
-	</section>
+		<p>Eine zweite Wohnung für genau nach deinen Vorstellungen und Bedürfnissen</p>
+	</Hero>
 	<div class="wrapper">
 		<div class="tiles">
 			<Tile image="/img/camper_nicole.png">
