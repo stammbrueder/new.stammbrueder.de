@@ -2,6 +2,7 @@
   font-family: 'BoucherieBlock';
   src:  url('/font/BoucherieBlock.woff2') format('woff2'),
   url('/font/BoucherieBlock.woff') format('woff');
+	font-display: fallback;
 }
 
 html {

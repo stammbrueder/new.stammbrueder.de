@@ -2,13 +2,14 @@
 import { Picture } from "@astrojs/image/components";
 export interface Props {
 	image: string
+	alt: string
 }
 
-const { image } = Astro.props
+const { image, alt } = Astro.props
 ---
 
 <section class="hero">
-	<Picture src={image} aspectRatio="3:2" widths={[400, 800, 1200]}/>
+	<Picture src={image} aspectRatio="3:2" widths={[400, 800, 1200]} loading="eager" alt={alt}/>
 	<div class="content">
 		<slot/>
 	</div>
@@ -19,27 +20,28 @@ const { image } = Astro.props
 		min-height: 100svh;
 		position: relative;
 
-		img {
-			position: absolute;
-			inset: 0;
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
+	img {
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
 
-		.content {
-			text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.9);
-			font-size: 1.5em;
-			padding: 8rem 1rem 1rem;
-			position: absolute;
-			inset: 0;
-			z-index: 1;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			color: white;
-		}
+	.content {
+		text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.9);
+		font-size: 1.5em;
+		padding: 8rem 1rem 1rem;
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: white;
+	}
+
 	}
 </style>
