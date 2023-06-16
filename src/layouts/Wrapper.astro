@@ -1,0 +1,10 @@
+---
+import Layout from "./Layout.astro";
+---
+
+<Layout {...Astro.props.frontmatter}>
+	<div class="wrapper" style="padding: 1rem">
+		<slot />
+	</div>
+</Layout>
+

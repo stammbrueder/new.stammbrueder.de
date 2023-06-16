@@ -1,0 +1,25 @@
+---
+export interface Props {
+	image?: string
+	video?: string
+	background?: string
+	className?: string
+	alt: string
+}
+
+const {image, video, className = '', alt=''} = Astro.props
+const classes = [className, 'tile-row']
+
+
+
+---
+
+<div class={classes.join(' ')}>
+	<div class="tile content" ><slot/></div>
+	<div class="tile img">
+		{image && <img src={image} alt={alt}/>}
+		{video && <video muted autoplay loop>
+			<source src={video} type="video/mp4" />
+		</video>}
+	</div>
+</div>

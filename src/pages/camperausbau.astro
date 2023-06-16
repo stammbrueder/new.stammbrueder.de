@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tile from "../components/Tile.astro";
+---
+<Layout title="Camperausbau - Stammbrüder" hero="true">
+	<section class="hero" style="--img: url('/img/camper_wald.jpg');">
+		<h1>Wir planen und fertigen individuelle Camper</h1>
+	</section>
+	<div class="wrapper">
+		<div class="tiles">
+			<Tile image="/img/camper_nicole.png">
+				<h2>Planung</h2>
+				<p>
+					Wir planen deinen Traum vom Camper gemeinsam mit dir auf den Millimeter genau am Computer.
+					Dabei starten wir mit einem groben Entwurf der Aufteilung des Raums und arbeiten dann die vielen kleinen
+					Details aus, die den Camper zu deinem Camper machen.
+				</p>
+			</Tile>
+			<Tile image="/img/cnc.jpg">
+				<h2>Fräsen der Teile</h2>
+				<p>
+					Sobald einzelne Elemente des Campers vollständig geplant sind geht es an die Produktion. Alle Bauteile werden
+					auf unserer CNC Fräse aus Plattenmaterial ausgeschnitten.
+				</p>
+			</Tile>
+			<Tile video="/img/zusammenbau.mp4">
+				<h2>Zusammenbauen</h2>
+				<p>
+
+				</p>
+			</Tile>
+		</div>
+
+		<!-- TODO: show blue, boxi and bulli -->
+	</div>
+</Layout>

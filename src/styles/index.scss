@@ -1,0 +1,56 @@
+
+
+.eichenscheibe {
+	--img: url("/img/eichenscheibe.jpg");
+}
+
+#nav {
+	--gap: 0px;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(clamp(50% - var(--gap), 350px, 100%), 1fr));
+
+	a {
+		display: flex;
+		text-align: center;
+		font-size: 2em;
+		aspect-ratio: 3/2;
+		align-items: center;
+		justify-content: center;
+		color: white;
+
+		background-size: cover;
+		background-position: center center;
+		background-image: var(--img);
+		transition: all 1s;
+
+		position: relative;
+		--color: rgba(16, 16, 203, 0.2);
+		filter: saturate(0.8);
+
+		&:hover {
+			filter: saturate(1.2);
+		}
+
+		h2 {
+			text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.9);
+		}
+	}
+
+}
+
+.tisch {
+	--img: url("/img/tische.jpg");
+	--color: rgba(255, 0, 0, 0.22) !important;
+}
+
+.camper {
+	--img: url("/img/camper.jpg")
+}
+
+.diverse {
+	--img: url("/img/brett.jpg")
+}
+
+.projekt {
+	--img: url("/img/camper_nicole.png");
+}
