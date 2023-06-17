@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/Wrapper.astro
+description: Impressum
 ---
 
 Impressum
