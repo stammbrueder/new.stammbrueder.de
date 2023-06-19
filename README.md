@@ -1,1 +1,0 @@
-[https://stammbrueder.github.io/new.stammbrueder.de/](https://stammbrueder.github.io/new.stammbrueder.de/)
