@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Wrapper.astro
 description: Impressum
+title: Impressum der Stammbrüder
 ---
 
 Impressum

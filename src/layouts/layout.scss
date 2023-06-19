@@ -1,43 +1,42 @@
 @font-face {
-  font-family: 'BoucherieBlock';
-  src:  url('/font/BoucherieBlock.woff2') format('woff2'),
-  url('/font/BoucherieBlock.woff') format('woff');
+	font-family: 'BoucherieBlock';
+	src: url('/font/BoucherieBlock.woff2') format('woff2'),
+	url('/font/BoucherieBlock.woff') format('woff');
 	font-display: fallback;
 }
 
 html {
-  font-family: "Helvetica Neue", Lucida Grande, sans-serif;
-  font-weight: normal;
-  font-style: normal;
+	font-family: "Helvetica Neue", Lucida Grande, sans-serif;
+	font-weight: normal;
+	font-style: normal;
 }
 
 @mixin boucherieblock() {
-  font-family: 'BoucherieBlock', sans-serif;
+	font-family: 'BoucherieBlock', sans-serif;
 }
 
 .wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
+	max-width: 1600px;
+	margin: 0 auto;
 }
 
 h1, h2, h3 {
-  @include boucherieblock
+	@include boucherieblock
 }
 
 html {
-  padding: 0;
-  margin: 0
-
+	padding: 0;
+	margin: 0
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 	color: inherit;
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0 auto;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 main {
@@ -45,20 +44,20 @@ main {
 }
 
 header {
-  top: 0;
+	top: 0;
 	z-index: 999;
-  max-height: 10em;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  background: rgba(black, 0.8);
+	max-height: 10em;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	background: rgba(black, 0.8);
 
-  .wrapper {
-    padding: 1em;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
+	.wrapper {
+		padding: 1em;
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+	}
 
 	#logo-container {
 		height: 10em;
@@ -73,33 +72,53 @@ header {
 	}
 
 
-  nav {
-    @include boucherieblock;
-    padding: 0;
-    font-size: 1.2em;
+	nav {
+		@include boucherieblock;
+		padding: 0;
+		font-size: 1.2em;
 
-    a {
-      padding: 1em;
-      color: white;
+		a {
+			padding: 1em;
+			color: white;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 footer {
-	background: rgba(black, 0.8);
-	color: white;
+	//color: white;
 	padding: 1em;
+	padding-bottom: 3em;
+	padding-top: 3em;
 	margin-top: 1rem;
-	font-size: .8rem;
-	display: flex;
+	background: linear-gradient(rgba(white, 0.95), rgba(white, 0.95)), url("/img/footer.png?as") no-repeat;
+	background-position-y: 0em;
+	background-size: cover;
 
-	nav {
-		margin-left: auto;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
+
+	.social {
+
+		a {
+			margin: 1em;
+			display: inline-flex;
+			height: 2rem;
+			line-height: 2rem;
+		}
+
+		svg {
+			height: 2rem;
+			margin-right: .5em;
+		}
+	}
+
 }
 
 .tile-row {
@@ -119,7 +138,7 @@ footer {
 		position: relative;
 	}
 
-	img{
+	img {
 		width: 100%;
 		object-fit: cover;
 		aspect-ratio: 1/1;
@@ -225,7 +244,7 @@ section.hero {
 
 		}
 
-		&:hover{
+		&:hover {
 			&:after {
 				background: rgba(black, 0.25);
 			}
@@ -238,7 +257,7 @@ section.hero {
 		h2 {
 			position: relative;
 			z-index: 1;
-			text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.9);
+			text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.9);
 		}
 	}
 
