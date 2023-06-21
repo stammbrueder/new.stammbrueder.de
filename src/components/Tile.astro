@@ -6,22 +6,23 @@ export interface Props {
 	video?: string
 	background?: string
 	className?: string
-	alt: string
+	alt: string,
 }
 
-const {image, video, className = '', alt=''} = Astro.props
+const { image, video, className = '', alt = '', background } = Astro.props
 const classes = [className, 'tile-row']
-
-
-
 ---
 
-<div class={classes.join(' ')}>
-	<div class="tile content" ><slot/></div>
+<div class={classes.join(' ')} style={background ? `background: ${background}` : ''}>
+	<div class="tile content">
+		<slot/>
+	</div>
 	<div class="tile img">
-		{image && <Picture src={image} alt={alt} widths={[400, 800]}/>}
-		{video && <video muted autoplay loop>
-			<source src={video} type="video/mp4" />
-		</video>}
+		{image &&
+			<Picture src={image} alt={alt} widths={[400, 800]}/>}
+		{video &&
+			<video muted autoplay loop>
+				<source src={video} type="video/mp4"/>
+			</video>}
 	</div>
 </div>
