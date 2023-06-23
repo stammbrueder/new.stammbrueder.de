@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Tile from "../../components/Tile.astro";
+import Hero from '../../components/Hero.astro'
+import { Picture } from '@astrojs/image/components';
+
+import bett from '../../../public/img/blue/bett.jpg';
+import platform from "../../../public/img/blue/platform.jpg";
+import stauraum from "../../../public/img/blue/stauraum.jpg";
+import konstruktion from "../../../public/img/blue/konstruktion.png";
+import schuhe from "../../../public/img/blue/schuhe.jpg";
+import schrank from "../../../public/img/blue/schrank.jpg";
+import blue from "../../../public/img/blue.jpg";
+import boxi from "../../../public/img/boxi.png";
+import bulli from "../../../public/img/bulli.png";
+---
+<Layout title="Blue, der erste Camper aus dem Hause Stammbrüder" hero="true" description="Einblicke in unseren Familiencamper"
+				flexibleHeader="true">
+	<Hero image="/img/camper_wald.jpg" alt="Camper im Wald">
+		<h1>Der praktische Camper für die ganze Familie</h1>
+		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen</p>
+	</Hero>
+	<section class="tiles wrapper">
+		<Tile image={konstruktion} alt="CAD Konstruktion von einem Innerausbaus von Blue" className="color">
+			<h2>Anforderungen</h2>
+			<ul>
+				<li>Fünf eingetragene Sitzplätze sowie Platz zum Schlafen für alle</li>
+				<li>Viele Fächer damit Ordnung herrscht</li>
+				<li>eine vernünftige Küche mit stehhöhe zum im Camper kochen</li>
+				<li>Autak für 5 Tage, d.h. > 100l Wasser, Solarstrom und Batterien</li>
+				<li>Viel Platz für alle und weniges umbauen</li>
+			</ul>
+		</Tile>
+		<Tile image={stauraum} alt="Jede Menge Fächer" className="stauraum color">
+			<h2>Stauraum</h2>
+			<p>
+				Nach einigen ausgeliehenen Vans kennt man das Problem nur zu gut. Ein vernünftiges Ablagesystem muss her sonst
+				versinkt man gleich am ersten Tag im Chaos. Wir haben in der Planung jeden Raum ausgenutzt und Fächer geplant.
+			</p>
+			<p>
+				Die Fächer links im Bild sind nur ca. 7cm tief, eignen sich aber hervorangend um Nudeln, Müsli, Öl sowie Gläser
+				zu verstauen.
+			</p>
+		</Tile>
+		<Tile image={bett} alt="Hubbett im Camper" className='bett color'>
+			<h2>Hubbett</h2>
+			<p>
+				Bei den meisten Vans ist das Bett starr verbaut und damit einen großen Teil der Zeit im Weg. Bei fünf Leuten
+				muss wenigstens ein Bett tagsüber verschwinden. Da guter Schlafkompfort wichtig ist und auch das Umbauen des
+				Campers sich auf ein minimum beschränken soll haben wir ein <em>elektrisch, absenkenden</em> Bett konstruiert
+				und gebaut. Das Bett ist in 20s gemacht bzw. verstaut.
+			</p>
+		</Tile>
+		<Tile image={platform} alt="Eine Platform zum liegen und sitzen" className="color">
+			<h2>Ausziehplatform mit Klapptisch</h2>
+			<p>
+				Als die Planung des Campers fast vollständig fertig war fanden wir irgendwo auf Instagram einen Van der
+				nahezu das gesamte Innenleben herausziehen konnte. Keine Frage, <q>dass brauchen wir auch</q> und die Planung
+				dafür wurde gestartet.
+			</p>
+			<p>
+				Der Klapptisch ist zentrales Element und aus Eiche Massivholz. Ebenfalls mit einem Handgriff wird so der Essbereich
+				zur Chillarea oder zum Bett für die Kinder.
+			</p>
+		</Tile>
+		<Tile image={schrank} alt="Kleiderschränke oberhalb der Fahrzeugkabine" className="color">
+			<h2>Kleiderschränke & Dachluke</h2>
+			<p>
+				<q>Fünf Leute - fünf Schränke!</q> Wir nutzen den Platz überhalb der Fahrerkabine und des seitlichen Fensters für jede
+				große Fächer oder kleine Schränke.
+			</p>
+		</Tile>
+		<Tile image={schuhe} alt="Eine Platform zum liegen und sitzen" className="color">
+			<h2>Schuhschrank, Standheizung, Dusche & Kocher</h2>
+			<p>
+				Nach einen der ersten Touren bemerkten wir, dass es ein regelrechtes Schuhchaos gibt. Außerdem waren die Nächte
+				doch manchmal kälter als gedacht und den Gaskocher immer aus dem Koffer zu holen war ziemlich nervig auf Dauer.
+			</p>
+			<p>
+				Wir verbauten den Gasbrenner fest und installierten die Standheizung seitlich auf der Treppenstufe. Die Kombination
+				aus Schuhschrank und Mülleimer verkleidet die Heizung und seitdem herscht Ordnung mit den ganzen Flop und Flops.
+			</p>
+		</Tile>
+	</section>
+	<section class="full">
+		<h2>Miete mich</h2>
+		<h3>Lust auf Vanlife mit unserem Blue?</h3>
+		<div class="wrapper" style="text-align: center">
+			<p>
+				Sollte dir unser Ausbau gefallen und du möchtest selbst gerne in den Genuss kommen die vielen Extra live zu erleben dann
+				leih ihn dir einfach über die Platform <a href="https://paulcamper.de/wohnmobil-mieten/leipzig/blue-53161/" target="_blank">Paul Camper</a> aus.
+			</p>
+			<p>
+				Weißt du nicht ob du dir das zutraust und möchtest den Camper erstmal begutachten. Kontaktiere und einfach per
+				<a href="mailto:hallo@stammbrueder.de?subject=Blue">Email</a> und wir finden einen Termin zu Besichtigung.
+			</p>
+		</div>
+
+	</section>
+
+	<style is:inline>
+		.bett img {
+			object-position: top;
+		}
+
+		.stauraum img {
+			object-position: left;
+		}
+	</style>
+
+
+</Layout>

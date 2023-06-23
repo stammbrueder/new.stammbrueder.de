@@ -2,43 +2,68 @@
 import Layout from "../layouts/Layout.astro";
 import Tile from "../components/Tile.astro";
 import Hero from '../components/Hero.astro'
+import { Picture } from '@astrojs/image/components';
 
-import planung from '../../public/img/camper_nicole.png';
+import planung from '../../public/img/blue/konstruktion.png';
 import cnc from '../../public/img/cnc.jpg';
 import video from '../../public/img/zusammenbau.mp4';
 
+import blue from '../../public/img/blue.jpg';
+import boxi from '../../public/img/boxi.png';
+import bulli from '../../public/img/bulli.png';
 ---
-<Layout title="individueller Camperausbau in Leipzig- Stammbrüder" hero="true" description="individueller Camperausbau von der CAD Planung bis zur CNC Fertigung in Leipzig">
+<Layout title="individueller Camperausbau in Leipzig- Stammbrüder" hero="true" description="individueller Camperausbau von der CAD Planung bis zur CNC Fertigung in Leipzig"
+flexibleHeader="true">
 	<Hero image="/img/camper_wald.jpg" alt="Camper im Wald">
 		<h1>Wir planen und fertigen individuelle Camper</h1>
 		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen</p>
 	</Hero>
-	<div class="wrapper">
-		<div class="tiles">
-			<Tile image={planung} alt="CAD Konstruktion von einem Innerausbaus eines Campers" background="#cdefff">
-				<h2>Planung</h2>
-				<p>
-					Wir planen deinen Traum vom Camper gemeinsam mit dir auf den Millimeter genau am Computer.
-					Dabei starten wir mit einem groben Entwurf der Aufteilung des Raums und arbeiten dann die vielen kleinen
-					Details aus, die den Camper zu deinem Camper machen.
-				</p>
-			</Tile>
-			<Tile image={cnc} alt="CNC Fräse" background="#8ac9e7">
-				<h2>Fräsen der Teile</h2>
-				<p>
-					Sobald einzelne Elemente des Campers vollständig geplant sind geht es an die Produktion. Alle Bauteile werden
-					auf unserer CNC Fräse aus Plattenmaterial ausgeschnitten.
-				</p>
-			</Tile>
-			<Tile video={video} alt="Schleifen eines Möbel" background="#cdefff">
-				<h2>Zusammenbauen</h2>
-				<p>
-					Da jedes Teil ein individuell geplantes Einzelstück ist steigt die Spannung im letzten Arbeitsschritt.
-					Hier kommen zum ersten mal alle Teile zusammen und werden dann miteinander verleimt.
-				</p>
-			</Tile>
-		</div>
+	<section class="full projekte">
+		<h2>Camperausbauten</h2>
+		<h3>Individuelle Vans die wir gemeinsam mit unserer Kundschaft geplant haben</h3>
+		<nav class="wrapper tile-nav">
+			<a href="/camper/blue">
+				<h2>Blue</h2>
+				<Picture src={blue} alt="Unser Camper mit dem Namen 'blue'" widths={[200, 400]} />
+			</a>
+			<a href="#">
+				<h2>Boxi</h2>
+				<Picture src={boxi} alt="Unser Camper mit dem Namen 'blue'" widths={[200, 400]} />
+			</a>
+			<a href="#">
+				<h2>Bulli</h2>
+				<Picture src={bulli} alt="T4 Bulli" widths={[200, 400]} />
+			</a>
+		</nav>
+	</section>
+	<section class="tiles wrapper">
+		<Tile image={planung} alt="CAD Konstruktion von einem Innerausbaus eines Campers" className="color">
+			<h2>Planung</h2>
+			<p>
+				Wir planen deinen Traum vom Camper gemeinsam mit dir auf den Millimeter genau am Computer.
+				Dabei starten wir mit einem groben Entwurf der Aufteilung des Raums und arbeiten dann die vielen kleinen
+				Details aus, die den Camper zu deinem Camper machen.
+			</p>
+		</Tile>
+		<Tile image={cnc} alt="CNC Fräse" className="color">
+			<h2>Fräsen der Teile</h2>
+			<p>
+				Sobald einzelne Elemente des Campers vollständig geplant sind geht es an die Produktion. Alle Bauteile werden
+				auf unserer CNC Fräse aus Plattenmaterial ausgeschnitten.
+			</p>
+		</Tile>
+		<Tile video={video} alt="Schleifen eines Möbel" className="color">
+			<h2>Zusammenbauen</h2>
+			<p>
+				Da jedes Teil ein individuell geplantes Einzelstück ist steigt die Spannung im letzten Arbeitsschritt.
+				Hier kommen zum ersten mal alle Teile zusammen und werden dann miteinander verleimt.
+			</p>
+		</Tile>
+	</section>
 
-		<!-- TODO: show blue, boxi and bulli -->
-	</div>
+
+	<!-- TODO: show blue, boxi and bulli -->
+
+
+
 </Layout>
