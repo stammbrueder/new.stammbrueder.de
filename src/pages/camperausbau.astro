@@ -17,11 +17,11 @@ import camper from '../assets/blue/camper_wald.jpg'
 flexibleHeader="true">
 	<Hero image={camper} alt="Camper im Wald">
 		<h1>Wir planen und fertigen individuelle Camper</h1>
-		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen</p>
+		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen.</p>
 	</Hero>
 	<section class="full projekte">
 		<h2>Camperausbauten</h2>
-		<h3>Individuelle Vans die wir gemeinsam mit unserer Kundschaft geplant haben</h3>
+		<h3>Individuelle Vans, die wir gemeinsam mit unseren Kunden geplant haben.</h3>
 		<nav class="wrapper tile-nav">
 			<a href="/camper/blue">
 				<h2>Blue</h2>
@@ -29,7 +29,7 @@ flexibleHeader="true">
 			</a>
 			<a href="#">
 				<h2>Boxi</h2>
-				<Picture src={boxi} alt="Unser Camper mit dem Namen 'blue'" widths={[200, 400]} />
+				<Picture src={boxi} alt="ausgebauter Peugeot Boxer" widths={[200, 400]} />
 			</a>
 			<a href="#">
 				<h2>Bulli</h2>
@@ -41,26 +41,32 @@ flexibleHeader="true">
 		<Tile image={planung} alt="CAD Konstruktion von einem Innerausbaus eines Campers" className="color">
 			<h2>Planung</h2>
 			<p>
-				Wir planen deinen Traum vom Camper gemeinsam mit dir auf den Millimeter genau am Computer.
-				Dabei starten wir mit einem groben Entwurf der Aufteilung des Raums und arbeiten dann die vielen kleinen
-				Details aus, die den Camper zu deinem Camper machen.
+				Wir planen deinen Traum vom Camper, gemeinsam mit dir auf den Millimeter genau am Computer.</p>
+				<p>Beginned mit einer Skizze der Raumaufteilung erarbeiten wir die Details des Campers, die ihn zu deinem zweiten Zuhause machen.
 			</p>
 		</Tile>
-		<Tile image={cnc} alt="CNC Fräse" className="color">
+		<Tile image={cnc} alt="CNC Fräse" className="color top">
 			<h2>Fräsen der Teile</h2>
 			<p>
-				Sobald einzelne Elemente des Campers vollständig geplant sind geht es an die Produktion. Alle Bauteile werden
-				auf unserer CNC Fräse aus Plattenmaterial ausgeschnitten.
+				Sobald einzelne Elemente deines Campers vollständig geplant sind, geht es an die Produktion. </p>
+			<p>Alle Bauteile werden
+				auf unserer CNC Fräse aus Plattenmaterial ausgefräst. Der Vorteil: exakte Teile, die sich wie ein Puzzle zusammenfügen.
 			</p>
 		</Tile>
 		<Tile video={video} alt="Schleifen eines Möbel" className="color">
 			<h2>Zusammenbauen</h2>
 			<p>
-				Da jedes Teil ein individuell geplantes Einzelstück ist steigt die Spannung im letzten Arbeitsschritt.
-				Hier kommen zum ersten mal alle Teile zusammen und werden dann miteinander verleimt.
+				Da jedes Teil ein individuell geplantes Einzelstück ist, steigt die Spannung im letzten Arbeitsschritt.
+				Hier kommen zum ersten mal alle Teile zusammen, werden miteinander verleimt und dein Camper nimmt Gestalt an.
 			</p>
 		</Tile>
 	</section>
+
+	<style is:inline>
+		.top img {
+			object-position: top;
+		}
+	</style>
 
 
 	<!-- TODO: show blue, boxi and bulli -->

@@ -7,13 +7,17 @@ import '../styles/index.scss'
 import eichenscheibe from '../assets/eichenscheibe.jpg';
 import tische from '../assets/tische.jpg';
 import camper from '../assets/camper.jpg';
+
+import ralf from '../assets/team/ralf.jpg';
+import tony from '../assets/team/tony.jpg';
 ---
 
 <Layout title="Stammbrüder - Wertiges aus Holz" flexibleHeader="true" hero="true" description="Camperausbau und Massivholztische handgefertig in Leipzig">
 
 	<Hero image={eichenscheibe} alt="Couchtisch aus einer Eichenscheibe">
-		<h1>Wertiges aus Holz made in Leipzig</h1>
-		<p>Wir planen gemeinsam Projekte mit dir und setzen deine Vorstellungen erst digital und dann in die Realität um.<p/>
+		<h1>Wertiges aus Holz - made in Leipzig</h1>
+		<p>Wir planen gemeinsam Projekte und setzen deine Vorstellungen erst digital und dann in die Realität um.
+		<p/>
 	</Hero>
 	<section id="nav" class="tile-nav">
 		<a href="/tische" class="tisch">
@@ -33,10 +37,27 @@ import camper from '../assets/camper.jpg';
 			<h2>Diverses</h2></a>
 			*/}
 	</section>
-	<section id="team">
+	<section id="team" class="full">
+		<h2>Die Stammbrüder</h2>
+		<h3>Drei Leipziger die sich den Traum einer eigenen Holzwerkstatt erfüllt haben</h3>
 
+		<div class="wrapper">
+			<p>
+				Wir sind Freunde die neben ihrem normalen Beruf ihrer Leidenschaft für Holz nachgehen. Aus der anfänglichen Idee
+				ist mittlerweile eines Unternehmen geworden. Gemeinsam mit unseren Kunden haben wir bisher noch jedes
+				Projekt gestämmt und nicht selten ist dabei aus der Kundenbeziehung eine Freundschaft entstanden. Und so
+				wächst die Bruderschaft der Stammbrüder stetig weiter.
+			</p>
+		</div>
 	</section>
+	<style is:inline>
+		.team  img {
+			max-width: 40vw;
+			aspect-ratio: 1/1;
+			object-fit: cover;
+		}
 
-
+	</style>
 </Layout>
+
 
