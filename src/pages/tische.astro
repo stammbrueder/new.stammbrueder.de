@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tile from "../components/Tile.astro";
+import Hero from '../components/Hero.astro'
+import { Picture } from '@astrojs/image/components';
+
+import planung from '../assets/tische/planung_ahorn.jpg';
+import cnc from '../assets/tische/eichenscheibe_fräsen.jpg';
+import video from '../assets/tische/schleifen.mp4';
+
+import eichentisch from '../assets/tische/eichentisch.jpg';
+import eichenscheibe from '../assets/eichenscheibe.jpg';
+import boxi from '../assets/tische/tische.jpg';
+import balkontisch from '../assets/tische/balkontisch.jpg';
+import schweissen from '../assets/tische/schweissen.jpg';
+---
+<Layout title="individuelle Massivholztische aus Leipzig- Stammbrüder" hero="true" description="individuelle Massivholztische nach Maß gefertigt in Leipzig"
+flexibleHeader="true">
+	<Hero image={eichentisch} alt="gedeckter Ahorntisch in Loft">
+		<h1>Wir planen und fertigen Massivholztische nach Maß</h1>
+		<p>handgefertigt von der Tischplatte bis zum Gestell</p>
+	</Hero>
+	<section class="full projekte">
+		<h2>Massivholztische</h2>
+		<h3>eine Auswahl an Tischen gefertigt in unserer Werkstatt in Leipzig</h3>
+		<nav class="wrapper tile-nav">
+			<a href="#">
+				<h2>Eichenscheibe</h2>
+				<Picture src={eichenscheibe} alt="Massive Eichenscheibe mit 140cm Durchmesser" widths={[200, 400]} />
+			</a>
+			<a href="#">
+				<h2>Eichentisch</h2>
+				<Picture src={boxi} alt="Eichentisch aus einem Stück" widths={[200, 400]} />
+			</a>
+			<a href="#">
+				<h2>Balkontisch</h2>
+				<Picture src={balkontisch} alt="Balkontisch aus Plantane" widths={[200, 400]} />
+			</a>
+		</nav>
+	</section>
+	<section class="tiles wrapper">
+		<Tile image={planung} alt="CAD Konstruktion von einem Tisch" className="color">
+			<h2>Planung</h2>
+			<p>
+				Wir fertigen Massivholztische für die Ewigkeit. Die Auswahl des richtigen Holzes spielt dabei ebendso eine Rolle
+				wie die Estätik des Untergestells.
+			</p>
+			<p>
+				Wir planen den Tisch im CAD Programm, sodass du vorab einen guten Eindruck von deinem Möbelstück bekommst.
+			</p>
+		</Tile>
+		<Tile image={cnc} alt="Eichenscheibe wird überfräst" className="color bottom">
+			<h2>Fräsen</h2>
+			<p>
+				Wir arbeiten unkonventionell und verarbeiten sehr breites Holz mit der CNC Fräse, da dies für normale Abrichten und
+				Dicktenhobel zu groß ist.
+			</p>
+			<p>Die Fräse ermöglich außerdem Schwalbenschwänze und andere Formen einfach einzulassen.</p>
+		</Tile>
+		<Tile image={schweissen} alt="Schweissen des Gestells" className="color top">
+			<h2>Schweißen</h2>
+			<p>
+				Die Untergestelle stimmen wir individuell ab und fertigen diese zu großen Teilen selbst.
+			</p>
+		</Tile>
+		<Tile video={video} alt="Schleifen eines Möbel" className="color video">
+			<h2>Schleifen und Ölen</h2>
+			<p>
+				Im letzten Schritt schleifen wir den Tisch fein und tragen mehrfach Hartwachsöl auf. Die Oberfläche ist
+				geschützt und bewahrt zu gleich die einzigartige Holzstruktur.
+			</p>
+		</Tile>
+	</section>
+
+	<style is:inline>
+		.bottom img {
+			object-position: bottom;
+		}
+
+		.top img {
+			object-position: top;
+		}
+
+		.video video {
+			aspect-ratio: 1/1;
+			object-fit: cover;
+			object-position: top;
+		}
+
+	</style>
+
+	<!-- TODO: show blue, boxi and bulli -->
+
+
+
+</Layout>

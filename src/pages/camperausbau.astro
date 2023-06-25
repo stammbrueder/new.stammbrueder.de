@@ -4,17 +4,18 @@ import Tile from "../components/Tile.astro";
 import Hero from '../components/Hero.astro'
 import { Picture } from '@astrojs/image/components';
 
-import planung from '../../public/img/blue/konstruktion.png';
-import cnc from '../../public/img/cnc.jpg';
-import video from '../../public/img/zusammenbau.mp4';
+import planung from '../assets/blue/konstruktion.png';
+import cnc from '../assets/cnc.jpg';
+import video from '../assets/zusammenbau.mp4';
 
-import blue from '../../public/img/blue.jpg';
-import boxi from '../../public/img/boxi.png';
-import bulli from '../../public/img/bulli.png';
+import blue from '../assets/blue.jpg';
+import boxi from '../assets/boxi.png';
+import bulli from '../assets/bulli.png';
+import camper from '../assets/blue/camper_wald.jpg'
 ---
 <Layout title="individueller Camperausbau in Leipzig- Stammbrüder" hero="true" description="individueller Camperausbau von der CAD Planung bis zur CNC Fertigung in Leipzig"
 flexibleHeader="true">
-	<Hero image="/img/camper_wald.jpg" alt="Camper im Wald">
+	<Hero image={camper} alt="Camper im Wald">
 		<h1>Wir planen und fertigen individuelle Camper</h1>
 		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen</p>
 	</Hero>

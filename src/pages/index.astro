@@ -3,21 +3,25 @@ import Layout from "../layouts/Layout.astro";
 import { Picture } from '@astrojs/image/components';
 import Hero from '../components/Hero.astro';
 import '../styles/index.scss'
+
+import eichenscheibe from '../assets/eichenscheibe.jpg';
+import tische from '../assets/tische.jpg';
+import camper from '../assets/camper.jpg';
 ---
 
 <Layout title="Stammbrüder - Wertiges aus Holz" flexibleHeader="true" hero="true" description="Camperausbau und Massivholztische handgefertig in Leipzig">
 
-	<Hero image="/img/eichenscheibe.jpg" alt="Couchtisch aus einer Eichenscheibe">
+	<Hero image={eichenscheibe} alt="Couchtisch aus einer Eichenscheibe">
 		<h1>Wertiges aus Holz made in Leipzig</h1>
 		<p>Wir planen gemeinsam Projekte mit dir und setzen deine Vorstellungen erst digital und dann in die Realität um.<p/>
 	</Hero>
 	<section id="nav" class="tile-nav">
 		<a href="/tische" class="tisch">
-			<Picture src="/img/tische.jpg" aspectRatio="3:2" widths={[400, 800, 1200]} alt="Eichentisch"/>
+			<Picture src={tische} aspectRatio="3:2" widths={[400, 800, 1200]} alt="Eichentisch"/>
 			<h2>Tische</h2>
 		</a>
 		<a href="/camperausbau" class="camper">
-			<Picture src="/img/camper.jpg" aspectRatio="3:2" widths={[400, 800, 1200]} alt="Camper bei Sonnenuntergang"/>
+			<Picture src={camper} aspectRatio="3:2" widths={[400, 800, 1200]} alt="Camper bei Sonnenuntergang"/>
 			<h2>Camperausbau</h2>
 		</a>
 		{/*

@@ -4,19 +4,17 @@ import Tile from "../../components/Tile.astro";
 import Hero from '../../components/Hero.astro'
 import { Picture } from '@astrojs/image/components';
 
-import bett from '../../../public/img/blue/bett.jpg';
-import platform from "../../../public/img/blue/platform.jpg";
-import stauraum from "../../../public/img/blue/stauraum.jpg";
-import konstruktion from "../../../public/img/blue/konstruktion.png";
-import schuhe from "../../../public/img/blue/schuhe.jpg";
-import schrank from "../../../public/img/blue/schrank.jpg";
-import blue from "../../../public/img/blue.jpg";
-import boxi from "../../../public/img/boxi.png";
-import bulli from "../../../public/img/bulli.png";
+import bett from '../../assets/blue/bett.jpg';
+import platform from "../../assets/blue/platform.jpg";
+import stauraum from "../../assets/blue/stauraum.jpg";
+import konstruktion from "../../assets/blue/konstruktion.png";
+import schuhe from "../../assets/blue/schuhe.jpg";
+import schrank from "../../assets/blue/schrank.jpg";
+import camper from '../../assets/blue/camper_wald.jpg'
 ---
 <Layout title="Blue, der erste Camper aus dem Hause Stammbrüder" hero="true" description="Einblicke in unseren Familiencamper"
 				flexibleHeader="true">
-	<Hero image="/img/camper_wald.jpg" alt="Camper im Wald">
+	<Hero image={camper} alt="Camper im Wald">
 		<h1>Der praktische Camper für die ganze Familie</h1>
 		<p>Ein zweites Zuhause genau nach deinen Vorstellungen und Bedürfnissen</p>
 	</Hero>
