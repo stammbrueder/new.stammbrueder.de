@@ -13,9 +13,13 @@ import eichenscheibe from '../assets/eichenscheibe.jpg';
 import boxi from '../assets/tische/tische.jpg';
 import balkontisch from '../assets/tische/balkontisch.jpg';
 import schweissen from '../assets/tische/schweissen.jpg';
+
+import '../styles/gallery.scss'
+
+let images = (await Astro.glob('../assets/gallery/tische/*.jpeg')).map(x => x.default);
 ---
 <Layout title="individuelle Massivholztische aus Leipzig- Stammbrüder" hero="true" description="individuelle Massivholztische nach Maß gefertigt in Leipzig"
-flexibleHeader="true">
+				flexibleHeader="true">
 	<Hero image={eichentisch} alt="gedeckter Ahorntisch in Loft">
 		<h1>Wir planen und fertigen Massivholztische nach Maß</h1>
 		<p>Handgefertigt von der Tischplatte bis zum Gestell.</p>
@@ -23,20 +27,13 @@ flexibleHeader="true">
 	<section class="full projekte">
 		<h2>Massivholztische</h2>
 		<h3>Eine Auswahl an Tischen, gefertigt in unserer Werkstatt in Leipzig.</h3>
-		<nav class="wrapper tile-nav">
-			<a href="#">
-				<h2>Eichenscheibe</h2>
-				<Picture src={eichenscheibe} alt="Massive Eichenscheibe mit 140cm Durchmesser" widths={[200, 400]} />
-			</a>
-			<a href="#">
-				<h2>Eichentisch</h2>
-				<Picture src={boxi} alt="Eichentisch aus einem Stück" widths={[200, 400]} />
-			</a>
-			<a href="#">
-				<h2>Balkontisch</h2>
-				<Picture src={balkontisch} alt="Balkontisch aus Plantane" widths={[200, 400]} />
-			</a>
-		</nav>
+		<div class="gallery wrapper">
+			{images.map(img =>
+				<a href="#">
+					<Picture src={img} widths={[200, 400, 1600]} loading="lazy"/>
+				</a>
+			)}
+		</div>
 	</section>
 	<section class="tiles wrapper">
 		<Tile image={planung} alt="CAD Konstruktion von einem Tisch" className="color">
@@ -91,9 +88,20 @@ flexibleHeader="true">
 		}
 
 	</style>
+	<script is:inline>
+		[...document.querySelectorAll('.gallery')].forEach(a => {
+			a.addEventListener('click', () => a.classList.toggle('fullscreen'))
+		});
+		[...document.querySelectorAll('.gallery a')].forEach(a => {
+			a.addEventListener('click', e => e.preventDefault())
+			a.addEventListener('keyup', e => {
+				if (e.code === 'Escape' && a.parentNode.classList.contains('fullscreen')) {
+					a.parentNode.classList.remove('fullscreen')
+				}
+			})
 
-	<!-- TODO: show blue, boxi and bulli -->
-
+		})
+	</script>
 
 
 </Layout>

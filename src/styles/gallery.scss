@@ -1,0 +1,51 @@
+.gallery:not(.fullscreen) {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	a {
+		max-width: 25%;
+		min-width: 100px;
+		box-sizing: border-box;
+		padding: 1rem;
+	}
+
+	img {
+		aspect-ratio: 3/2;
+		width: 100%;
+		height: 100%;
+
+		border-radius: 1rem;
+		object-fit: cover;
+	}
+}
+
+
+.gallery.fullscreen {
+
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	max-width: none;
+
+	overflow-y: hidden;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	display: flex;
+
+	a {
+		flex: 0 0 100vw;
+		overflow: hidden;
+		background: rgba(black, 0.5);
+		scroll-snap-align: start;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+	}
+
+}
