@@ -8,8 +8,7 @@ import eichenscheibe from '../assets/eichenscheibe.jpg';
 import tische from '../assets/tische.jpg';
 import camper from '../assets/camper.jpg';
 
-import ralf from '../assets/team/ralf.jpg';
-import tony from '../assets/team/tony.jpg';
+import stammbrueder from '../assets/ralf-tony-clemens.jpg';
 ---
 
 <Layout title="Stammbrüder - Wertiges aus Holz" flexibleHeader="true" hero="true" description="Camperausbau und Massivholztische handgefertig in Leipzig">
@@ -43,23 +42,16 @@ import tony from '../assets/team/tony.jpg';
 		<h2>Die Stammbrüder</h2>
 		<h3>Drei Leipziger die sich den Traum einer eigenen Holzwerkstatt erfüllt haben</h3>
 
-		<div class="wrapper">
+		<div class="wrapper team">
 			<p>
 				Wir sind Freunde die neben ihrem normalen Beruf ihrer Leidenschaft für Holz nachgehen. Aus der anfänglichen Idee
 				ist mittlerweile eines Unternehmen geworden. Gemeinsam mit unseren Kunden haben wir bisher noch jedes
 				Projekt gestämmt und nicht selten ist dabei aus der Kundenbeziehung eine Freundschaft entstanden. Und so
 				wächst die Bruderschaft der Stammbrüder stetig weiter.
 			</p>
+			<Picture src={stammbrueder} widths={[400, 800, 1200]} alt="Die Stammbrüder: Ralf, Tony & Clemens"/>
 		</div>
 	</section>
-	<style is:inline>
-		.team  img {
-			max-width: 40vw;
-			aspect-ratio: 1/1;
-			object-fit: cover;
-		}
-
-	</style>
 </Layout>
 
 
