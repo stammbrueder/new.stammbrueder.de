@@ -7,6 +7,12 @@
 	}
 }
 
+@mixin desktop() {
+	@media screen and (min-width: 800px) {
+		@content
+	}
+}
+
 html {
 	font-family: "Helvetica Neue", Lucida Grande, sans-serif;
 	font-weight: normal;
@@ -20,6 +26,14 @@ html {
 
 h1, h2, h3 {
 	@include headline()
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.25em;
 }
 
 html {
@@ -44,6 +58,27 @@ main {
 	a {
 		color: #3273dc;
 	}
+}
+
+.btn {
+	padding: 0.5em 1em;
+	background: rgba(#5992c8, 0.9);
+	font-weight: bold;
+	color: white;
+	border-radius: .25em;
+	box-shadow: 2px 2px 0.2em rgba(0, 0, 0, 0.5);
+	@include headline();
+	white-space: nowrap;
+	transition: all 0.5s;
+
+	&:hover {
+		background: #5992c8;
+		box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+
+.ctas {
+	margin: 1em
 }
 
 header {
